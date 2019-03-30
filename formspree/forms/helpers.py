@@ -12,7 +12,7 @@ from formspree.stuff import redis_store, DB
 from flask import jsonify
 from flask_login import current_user
 
-CAPTCHA_URL = 'https://www.google.com/recaptcha/api/siteverify'
+CAPTCHA_URL = 'https://www.recaptcha.net/recaptcha/api/siteverify'
 CAPTCHA_VAL = 'g-recaptcha-response'
 
 HASH = lambda x, y: hashlib.md5(x.encode('utf-8')+y.encode('utf-8')+settings.NONCE_SECRET).hexdigest()
